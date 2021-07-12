@@ -9,21 +9,28 @@
 </head>
 <body>
     <main>
-        <div class="yellow-line"><img src="images/yellow-line.svg" alt=""></div>
-        <div class="head">
-            <h1>
-                To-do list
-            </h1>
-        </div>
+        <div class="yellow-line"><img src="images/yellow-line.svg" alt="yellow line"></div>
+        <h1 class="head-name">
+            To-do list
+        </h1>
         <div class="sort-button">
-            <button>^=</button>
+            <img class="grey-down" src="images/grey-down.svg">
+            <img class="grey-up" src="images/grey-up.svg">
+            <img class="black-up" src="images/black-up.svg">
+            <img class="black-down" src="images/black-down.svg">
         </div>
         <label>
-            <input>
-            <button>x</button>
+            <div class="input-field">
+                <input class="to-do-string">
+                <div class="cancel">
+                    <img class="cancel-rest" src="images/cancel-rest.svg">
+                    <img class="cancel-active" src="images/cancel-active.svg">
+                </div>
+            </div>
         </label>
         <div class="add-button">
-            <button>add</button>
+            <p class="add-symbol">+</p>
+            <p class="add-text">Добавить</p>
         </div>
     </main>
     <script src="script.js"></script>

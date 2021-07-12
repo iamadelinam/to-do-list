@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 
+html, body{
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
 body {
     font-family: Roboto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 main {
@@ -13,3 +19,89 @@ main {
     border-radius: 10px;   
 }
 
+.head-name {
+    font-size: 26px;
+    display: flex;
+    margin-top: 13px;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort-button {
+    display: block;
+    justify-content: flex-end;
+}
+.grey-down {
+    display: flex;
+    justify-content: flex-end;
+}
+.grey-up {
+    display: none;
+}
+
+.black-up {
+    display: none;
+}
+
+.black-down {
+    display: none;
+}
+
+.input-field {
+    width: 286px;
+    height: 40px;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    margin-top: 11px;
+}
+
+.to-do-string {
+    border: 0px;
+    margin-left: 27px;
+}
+
+.cancel {
+    display: flex;
+    justify-content: flex-end;
+}
+.cancel-active {
+    display: none;
+}
+
+.add-button {
+    width: 150px;
+    height: 42px;
+    background: #9953F1;
+    border-radius: 71px;
+    display: flex;
+    margin: auto;
+    margin-top: 18px;
+    margin-bottom: 19px;
+}
+
+.add-symbol {
+    width: 42px;
+    height: 42px;
+    background: #AA68FE;
+    border-radius: 71px;
+    margin: 0px; 
+    line-height: 43px;
+    text-align: center; 
+    color: white;
+}
+
+.add-text {
+    margin: 0px;
+    padding-left: 11px;
+    padding-top: 14px;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
