@@ -29,6 +29,8 @@ main {
 }
 
 .sort-button {
+    border: 0px;
+    background-color: white;
     display: block;
     justify-content: flex-end;
 }
@@ -64,11 +66,13 @@ main {
     margin-left: 27px;
 }
 
-.cancel {
+.delete-button {
+    border: 0px;
+    background-color: white;
     display: flex;
     justify-content: flex-end;
 }
-.cancel-active {
+.delete-active {
     display: none;
 }
 
@@ -76,6 +80,7 @@ main {
     width: 150px;
     height: 42px;
     background: #9953F1;
+    border: 0px;
     border-radius: 71px;
     display: flex;
     margin: auto;
@@ -88,7 +93,8 @@ main {
     height: 42px;
     background: #AA68FE;
     border-radius: 71px;
-    margin: 0px; 
+    margin-top: -1px; 
+    margin-left: -6px;  
     line-height: 43px;
     text-align: center; 
     color: white;
