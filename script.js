@@ -35,13 +35,54 @@ taskDelete.addEventListener('mouseout', (event) => {
     taskDelete.src = 'images/delete-rest.svg'
 })
 
-
 let taskSort = document.querySelector('.sort-button')
 
-function changeSortButton(taskSort) {
-    if (taskSort.src = 'images/grey-down.svg') {
-        taskSort.addEventListener('mouseover', (event) => {
-            taskSort.src = 'images/black-down.svg'
-        })
-    }
-}
+taskSort.addEventListener('mouseover', (event) => {
+    taskSort.src = 'images/black-down.svg'
+})
+taskSort.addEventListener('mouseout', (event) => {
+    taskSort.src = 'images/grey-down.svg'
+})
+taskSort.addEventListener('click', (event) => {
+    taskSort.src = 'images/black-up.svg'
+})
+
+
+taskSort.addEventListener('click', (event) => {
+    let taskArray = []
+    document.querySelectorAll('.input-field').forEach((element) => {
+        taskArray.push(element)
+    })
+    taskArray.sort((a, b) => {
+        let textA = a.firstElementChild.value
+        let textB = b.firstElementChild.value
+        let orderIndicator = textA.localeCompare(textB)
+        return orderIndicator
+    })
+    let parentList = document.querySelector('.list')
+    taskArray.forEach((element) => {
+        element.remove()
+        parentList.append(element)
+    })
+})
+
+// let taskSortReversed = document.querySelector('.sort-button')
+
+// taskSortReversed.addEventListener('click', (event) => {
+//     let taskArray = []
+//     document.querySelectorAll('.input-field').forEach((element) => {
+//         taskArray.push(element)
+//     })
+//     taskArray.sort((a, b) => {
+//         let textA = a.firstElementChild.value
+//         let textB = b.firstElementChild.value
+//         let orderIndicator = textB.localeCompare(textA)
+//         return orderIndicator
+//     })
+//     let parentList = document.querySelector('.list')
+//     taskArray.forEach((element) => {
+//         element.remove()
+//         parentList.insertBefore(element, parentList.firstElementChild)
+//     })
+// })
+
