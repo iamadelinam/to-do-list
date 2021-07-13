@@ -28,6 +28,12 @@ main {
     align-items: center;
 }
 
+.div-for-sort-button {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
 .sort-button {
     border: 0px;
     background-color: white;
@@ -59,6 +65,7 @@ main {
     display: flex;
     margin: auto;
     margin-top: 11px;
+    justify-content: space-evenly;
 }
 
 .to-do-string {
@@ -71,7 +78,12 @@ main {
     background-color: white;
     display: flex;
     justify-content: flex-end;
+    padding: 0px;
+    display: flex;
+    align-items: center;
 }
+
+
 .delete-active {
     display: none;
 }

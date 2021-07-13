@@ -4,16 +4,16 @@
 //     event.target.parentElement.remove
 // })
 
-const taskAdd = document.createElement('.input-field')
-taskAdd.addEventListener('click', (event) => {
-    parentElement.append
-})
+// const taskAdd = document.createElement('.input-field')
+// taskAdd.addEventListener('click', (event) => {
+//     parentElement.append
+// })
 
 
 
-let changeSortButton = document.querySelector('.sort-button')
+// let changeSortButton = document.querySelector('.sort-button')
 
-let imageSortButton = document.querySelector('.grey-down')
-function changeSortButtons() {
+// let imageSortButton = document.querySelector('.grey-down')
+// function changeSortButtons() {
 
-}
+// }
