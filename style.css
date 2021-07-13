@@ -5,6 +5,7 @@ html, body{
     margin: 0;
     padding:0;
 }
+
 body {
     font-family: Roboto;
     display: flex;
@@ -37,40 +38,36 @@ main {
 .sort-button {
     border: 0px;
     background-color: white;
-    display: block;
-    justify-content: flex-end;
-}
-.grey-down {
     display: flex;
-    justify-content: flex-end;
-}
-.grey-up {
-    display: none;
 }
 
-.black-up {
-    display: none;
-}
-
-.black-down {
-    display: none;
-}
-
-.input-field {
+.list {
     width: 286px;
-    height: 40px;
     border: 1px solid #C4C4C4;
     box-sizing: border-box;
     border-radius: 10px;
     display: flex;
     margin: auto;
     margin-top: 11px;
+    flex-direction: column;
+}
+
+.input-field {
+    width: 286px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+    margin: 0px;
     justify-content: space-evenly;
 }
 
 .to-do-string {
+    width: 70%;
+    height: 20px;
     border: 0px;
-    margin-left: 27px;
+    margin-top: 8px;
 }
 
 .delete-button {
@@ -81,11 +78,6 @@ main {
     padding: 0px;
     display: flex;
     align-items: center;
-}
-
-
-.delete-active {
-    display: none;
 }
 
 .add-button {

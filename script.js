@@ -1,19 +1,47 @@
-// const taskDelete = document.querySelector('.delete-button')
+let taskAdd = document.querySelector('.add-button')
+taskAdd.addEventListener('click', (event) => {
+    let newTask = document.querySelector('.input-field').cloneNode(true)
 
-// taskDelete.addEventListener('click', (event) => {
-//     event.target.parentElement.remove
-// })
+    newTask.firstElementChild.value = ''
 
-// const taskAdd = document.createElement('.input-field')
-// taskAdd.addEventListener('click', (event) => {
-//     parentElement.append
-// })
+    let parentElement = document.querySelector('.list')
+    parentElement.append(newTask)
+
+    newTask.lastElementChild.addEventListener('click', (event) => {
+        newTask.remove()
+    })
+
+    newTask.lastElementChild.addEventListener('mouseover', (event) => {
+        newTask.lastElementChild.src = 'images/delete-active.svg'
+    })
+    newTask.lastElementChild.addEventListener('mouseout', (event) => {
+        newTask.lastElementChild.src = 'images/delete-rest.svg'
+    })
+})
 
 
+let taskDelete = document.querySelector('.delete-button')
 
-// let changeSortButton = document.querySelector('.sort-button')
+taskDelete.addEventListener('click', (event) => {
+    let doneTask = document.querySelector('.input-field')
+    doneTask.remove()
+})
 
-// let imageSortButton = document.querySelector('.grey-down')
-// function changeSortButtons() {
+taskDelete.addEventListener('mouseover', (event) => {
+    taskDelete.src = 'images/delete-active.svg'
+})
 
-// }
+taskDelete.addEventListener('mouseout', (event) => {
+    taskDelete.src = 'images/delete-rest.svg'
+})
+
+
+let taskSort = document.querySelector('.sort-button')
+
+function changeSortButton(taskSort) {
+    if (taskSort.src = 'images/grey-down.svg') {
+        taskSort.addEventListener('mouseover', (event) => {
+            taskSort.src = 'images/black-down.svg'
+        })
+    }
+}
