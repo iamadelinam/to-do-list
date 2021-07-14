@@ -1,3 +1,5 @@
+let initialTask = document.querySelector('.list')
+
 let taskAdd = document.querySelector('.add-button')
 taskAdd.addEventListener('click', (event) => {
     let newTask = document.querySelector('.input-field').cloneNode(true)
@@ -37,17 +39,34 @@ taskDelete.addEventListener('mouseout', (event) => {
 
 let taskSort = document.querySelector('.sort-button')
 
-taskSort.addEventListener('mouseover', (event) => {
-    taskSort.src = 'images/black-down.svg'
-})
-taskSort.addEventListener('mouseout', (event) => {
-    taskSort.src = 'images/grey-down.svg'
-})
-taskSort.addEventListener('click', (event) => {
-    taskSort.src = 'images/black-up.svg'
-})
+// taskSort.addEventListener('mouseover', (event) => {
+//     taskSort.src = 'images/black-down.svg'
+// })
+// taskSort.addEventListener('mouseout', (event) => {
+//     taskSort.src = 'images/grey-down.svg'
+// })
+// taskSort.addEventListener('click', (event) => {
+//     taskSort.src = 'images/black-up.svg'
+// })
+
+// if (taskSort.src = 'images/grey-down.svg') {
+//     taskSort.addEventListener('mouseover', (event) => {
+//         taskSort.src = 'images/black-down.svg'
+//     })
+//     taskSort.addEventListener('mouseout', (event) => {
+//         taskSort.src = 'images/grey-down.svg'
+//     })
+// } else if (taskSort.src = 'images/black-up.svg') {
+//     taskSort.addEventListener('mouseout', (event) => {
+//         taskSort.src = 'images/grey-up.svg'
+//     })
+// }
 
 
+
+
+
+let multiplier = 1 
 taskSort.addEventListener('click', (event) => {
     let taskArray = []
     document.querySelectorAll('.input-field').forEach((element) => {
@@ -57,8 +76,16 @@ taskSort.addEventListener('click', (event) => {
         let textA = a.firstElementChild.value
         let textB = b.firstElementChild.value
         let orderIndicator = textA.localeCompare(textB)
-        return orderIndicator
+        return orderIndicator*multiplier
     })
+
+    if (multiplier === -1) {
+        taskSort.src = 'images/black-up.svg'
+    } else if (multiplier === 1) {
+        taskSort.src = 'images/black-down.svg'
+    }
+
+    multiplier = multiplier*(-1)
     let parentList = document.querySelector('.list')
     taskArray.forEach((element) => {
         element.remove()
@@ -71,18 +98,20 @@ taskSort.addEventListener('click', (event) => {
 // taskSortReversed.addEventListener('click', (event) => {
 //     let taskArray = []
 //     document.querySelectorAll('.input-field').forEach((element) => {
-//         taskArray.push(element)
+//         taskArray.unshift(element)
 //     })
 //     taskArray.sort((a, b) => {
 //         let textA = a.firstElementChild.value
 //         let textB = b.firstElementChild.value
-//         let orderIndicator = textB.localeCompare(textA)
-//         return orderIndicator
+//         let orderIndicatorReversed = textB.localeCompare(textA)
+//         return orderIndicatorReversed
 //     })
 //     let parentList = document.querySelector('.list')
+//     let theFirstChild = parentList.firstChild
 //     taskArray.forEach((element) => {
 //         element.remove()
-//         parentList.insertBefore(element, parentList.firstElementChild)
+//         parentList.insertBefore(element, theFirstChild)
 //     })
+//     taskSort.src = 'images/black-up.svg'
 // })
 
